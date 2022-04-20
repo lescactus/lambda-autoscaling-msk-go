@@ -1,0 +1,65 @@
+{
+    "version": "0",
+    "id": "ec865b05-6c58-8265-4281-62362a3f529f",
+    "detail-type": "AWS API Call via CloudTrail",
+    "source": "aws.kafka",
+    "account": "231457134981",
+    "time": "2021-11-16T13:11:26Z",
+    "region": "eu-central-1",
+    "resources": [],
+    "detail": {
+        "awsRegion": "eu-central-1",
+        "errorCode": "BadRequestException",
+        "eventCategory": "Management",
+        "eventID": "2111f4a2-ffba-4656-a7ee-f049f0fa1a9e",
+        "eventName": "UpdateBrokerStorage",
+        "eventSource": "kafka.amazonaws.com",
+        "eventTime": "2021-11-16T13:11:26Z",
+        "eventType": "AwsApiCall",
+        "eventVersion": "1.08",
+        "managementEvent": true,
+        "readOnly": false,
+        "recipientAccountId": "231457134981",
+        "requestID": "8573a830-3319-47f8-be3c-3c8b90573536",
+        "requestParameters": {
+            "clusterArn": "arn%3Aaws%3Akafka%3Aeu-central-1%3A231457134981%3Acluster%2Falma%2F6e494b06-9803-410a-a237-ec5e7068c0ad-5",
+            "currentVersion": "K1IM4EOPHS76S7",
+            "targetBrokerEBSVolumeInfo": [
+                {
+                    "kafkaBrokerNodeId": "All",
+                    "volumeSizeGB": 39
+                }
+            ]
+        },
+        "responseElements": {
+            "Access-Control-Expose-Headers": "x-amzn-errortype,x-amzn-requestid,x-amzn-errormessage,x-amzn-trace-id,x-amz-apigw-id,date",
+            "Access-Control-Max-Age": "86400",
+            "invalidParameter": "clusterArn",
+            "message": "The provided cluster's storage was modified in the last 6 hours. Please wait for 6 hours between subsequent storage changes."
+        },
+        "sourceIPAddress": "application-autoscaling.amazonaws.com",
+        "userAgent": "application-autoscaling.amazonaws.com",
+        "userIdentity": {
+            "accessKeyId": "ASIATLY7LTGCRRRSPCPC",
+            "accountId": "231457134981",
+            "arn": "arn:aws:sts::231457134981:assumed-role/AWSServiceRoleForApplicationAutoScaling_KafkaCluster/AutoScaling-UpdateDesiredCapacity",
+            "invokedBy": "application-autoscaling.amazonaws.com",
+            "principalId": "AROATLY7LTGC6QGEWH2F2:AutoScaling-UpdateDesiredCapacity",
+            "sessionContext": {
+                "attributes": {
+                    "creationDate": "2021-11-16T13:07:25Z",
+                    "mfaAuthenticated": "false"
+                },
+                "sessionIssuer": {
+                    "accountId": "231457134981",
+                    "arn": "arn:aws:iam::231457134981:role/aws-service-role/kafka.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_KafkaCluster",
+                    "principalId": "AROATLY7LTGC6QGEWH2F2",
+                    "type": "Role",
+                    "userName": "AWSServiceRoleForApplicationAutoScaling_KafkaCluster"
+                },
+                "webIdFederationData": {}
+            },
+            "type": "AssumedRole"
+        }
+    }
+}
